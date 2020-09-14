@@ -214,7 +214,7 @@ namespace SkalProj_Datastrukturer_Minne
                 }
                 else if (item == ')' || item == '}' || item == ']')
                 {
-                    if (stack.Peek() != GetComplementBracket(item))
+                    if (stack.Peek() != ComplementParenthesis(item))
                     {
                         error = true;
                         break;
@@ -227,7 +227,7 @@ namespace SkalProj_Datastrukturer_Minne
             else
                 Console.WriteLine("Brackets are fine");
             Console.ReadLine();
-             static char GetComplementBracket(char item)
+             static char ComplementParenthesis(char item)
             {
                 switch (item)
                 {
